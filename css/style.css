@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.7rem;
+  font-weight: 300;
+  background-color: black; }
+
+.container {
+  display: grid;
+  grid-template-columns: [side-start] minmax(6rem, 1fr) [side-end] repeat(8, [col-start] minmax(min-content, 15.3rem) [col-end]) minmax(6rem, 1fr) [full-end];
+  grid-template-rows: minmax(5rem, 1fr) repeat(4, minmax(13.4rem, 1fr)) minmax(5rem, 1fr);
+  height: 100vh;
+  background-color: black; }
+
+h1 {
+  font-weight: 700;
+  font-size: 10rem;
+  font-family: "Heebo", sans-serif; }
+
+.sidebar {
+  grid-row: 1/-1;
+  grid-column: side-start / side-end;
+  background-image: linear-gradient(#fd4d6b, #fc9cac);
+  background-color: #fdfd04; }
+
+.landing {
+  background-color: black;
+  grid-column: side-end / full-end;
+  grid-row: 1 /-1;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: [side-start] minmax(6rem, 1fr) [side-end] repeat(16, [col-start] minmax(min-content, 7.7rem) [col-end]) minmax(6rem, 1fr) [full-end];
+  grid-template-rows: minmax(5rem, 1fr) repeat(4, minmax(13.4rem, 1fr)) minmax(5rem, 1fr); }
+  .landing__letter {
+    font-family: "Heebo", sans-serif;
+    font-weight: 700;
+    background-image: linear-gradient(#fd4d6b, #fc9cac);
+    font-size: 20rem; }
+    .landing__letter:not(:last-child) {
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    .landing__letter:nth-child(1) {
+      grid-row: 3 /5;
+      grid-column: 6/7; }
+    .landing__letter:nth-child(2) {
+      grid-row: 3 /5;
+      grid-column: 7/9; }
+    .landing__letter:nth-child(3) {
+      grid-row: 3 /5;
+      grid-column: 9/11;
+      height: 15rem;
+      width: 15rem;
+      border-radius: 50%; }
+
+.hypno {
+  background-image: linear-gradient(#fd4d6b, #fc9cac);
+  background-size: cover;
+  transform: rotate(0); }
+
+.turn {
+  animation: spin 1s ease-in; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(720deg); } }

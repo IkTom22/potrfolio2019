@@ -1,0 +1,42 @@
+$color-pink: #fd4d6b;
+$color-pink-light: #fc9cac;
+
+$color-orange: #ff5e00;
+$color-orange-light: #ff905d;
+
+$color-teal: #048888;
+$color-teal-light: #03c9c9;
+
+$color-yellow: #fdfd04;
+$color-yellow-light: #fcfc3f;
+
+$color-green: #05e210;
+$color-green: #75f77b;
+
+$font-display:'Heebo', sans-serif;
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10/16=0.625
+}
+
+body {
+    font-size: 1.7rem;
+    font-weight: 300;
+    background-color:black;  
+}
+.container{
+    display: grid;
+    grid-template-columns: [side-start] minmax(6rem, 1fr) [side-end] repeat(8, [col-start] minmax(min-content, 15.3rem) [col-end])  minmax(6rem, 1fr) [full-end];
+    grid-template-rows: minmax(5rem, 1fr) repeat(4, minmax(13.4rem, 1fr)) minmax(5rem, 1fr);
+    height: 100vh;
+    background-color: black;
+}

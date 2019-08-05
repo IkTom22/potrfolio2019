@@ -1,0 +1,61 @@
+.landing{
+    background-color: black;
+    
+    grid-column: side-end / full-end;
+    grid-row: 1 /-1;
+    justify-content: center;
+    align-items: center;
+    @include base-template;
+
+    &__letter {
+        font-family: $font-display;
+        font-weight: 700;
+        background-image: linear-gradient($color-pink, $color-pink-light);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        font-size: 20rem;
+        &:not(:last-child){
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        &:nth-child(1){
+            grid-row: 3 /5;
+            grid-column: 6/7;
+            
+           
+        }
+        &:nth-child(2){
+            
+            
+            grid-row: 3 /5;
+            grid-column: 7/9;
+            
+        }
+        &:nth-child(3){
+            grid-row: 3 /5;
+            grid-column: 9/11;
+            height: 15rem;
+            width: 15rem;
+            border-radius: 50%;
+            
+
+            
+        }
+    }
+}
+.hypno{
+    // background-image: linear-gradient(rgba($color-pink, .8), rgba($color-pink-light, .3)), url(../img/hypnosis-pink.png);
+    background-image: linear-gradient($color-pink, $color-pink-light);
+    background-size: cover;
+    transform: rotate(0);
+}
+.turn {
+    animation: spin 1s ease-in;
+}
+@keyframes spin {
+    100% { 
+        transform: rotate(720deg);
+    }
+}

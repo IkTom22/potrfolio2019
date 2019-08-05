@@ -1,0 +1,7 @@
+.sidebar {
+    grid-row: 1/-1;
+    grid-column: side-start / side-end;
+    background-image: linear-gradient($color-pink, $color-pink-light);
+    background-color: $color-yellow;
+    
+}
