@@ -1,24 +1,72 @@
 .landing{
-    background-color: black;
     
+    z-index: 3000;
+    // background-color: #000;
     grid-column: side-end / full-end;
     grid-row: 1 /-1;
     justify-content: center;
     align-items: center;
     @include base-template;
 
+    &__wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
     &__letter {
+        position: relative;
         font-family: $font-display;
         font-weight: 700;
-        background-image: linear-gradient($color-pink, $color-pink-light);
-        // -webkit-background-clip: text;
-        // -webkit-text-fill-color: transparent;
+        // fallback color
+        color: pink;
+        // display: inline-block;
+        // background-image: linear-gradient(to right, 
+        //                                 $color-black 0%, 
+        //                                 $color-black 50%,
+        //                                 $color-pink 55%,
+        //                                 $color-pink-light 100%);
+        background-image: linear-gradient(to right, 
+                                        $color-pink-redish 0%,
+                                        $color-pink-darker 20%,
+                                        white 100%);  
+        // background-image: linear-gradient(to right, 
+        //                                 white 0%, 
+        //                                 beige 100%);                                
+                                        
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
         font-size: 20rem;
-        &:not(:last-child){
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
         }
+
+        &::before{
+            //background-image: inherit;
+            top: 0;
+            left:0;
+            bottom: 0; 
+            right: 0;
+            z-index: -2;
+        }
+        &::after{
+            z-index: -1;
+            top: .125em;
+            right: .125em;
+            bottom: .125em;
+            left: .125em;
+            // background-color: #000;
+        }
+
+        // &:not(:last-child){
+        //     -webkit-background-clip: text;
+        //     background-clip: text;
+        //     -webkit-text-fill-color: transparent;
+        // }
         
         &:nth-child(1){
             grid-row: 3 /5;
@@ -27,8 +75,7 @@
            
         }
         &:nth-child(2){
-            
-            
+
             grid-row: 3 /5;
             grid-column: 7/9;
             
@@ -36,20 +83,20 @@
         &:nth-child(3){
             grid-row: 3 /5;
             grid-column: 9/11;
-            height: 15rem;
-            width: 15rem;
-            border-radius: 50%;
-            
+            // height: 15rem;
+            // width: 15rem;
+            // border-radius: 50%;
 
-            
         }
+
     }
 }
 .hypno{
-    // background-image: linear-gradient(rgba($color-pink, .8), rgba($color-pink-light, .3)), url(../img/hypnosis-pink.png);
-    background-image: linear-gradient($color-pink, $color-pink-light);
+     background-image: linear-gradient(rgba($color-pink, .8), rgba($color-pink-light, .3)), url(../img/hypnosis-pink.png);
+    // background-image: linear-gradient($color-pink, $color-pink-light);
     background-size: cover;
     transform: rotate(0);
+    
 }
 .turn {
     animation: spin 1s ease-in;

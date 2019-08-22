@@ -1,0 +1,183 @@
+.about {
+    grid-column: side-end/ full-end;
+    grid-row: 1 / -1;
+    z-index: 1000;
+    //background-image: linear-gradient($color-orange, $color-pink-light);
+    background-image: linear-gradient( $color-teal-dark, $color-teal, $color-teal-light, $color-teal-dark);
+    position: relative;
+    // background-color: #fff;
+
+    &__maru{
+        position: absolute;
+        // z-index: 5000;
+        height: 100%;
+        width: 100%;
+        top: 15%;
+        left:46%;
+        z-index: 1500;
+        background-image: url(../img/sakura-doll-02.png);
+        background-repeat: no-repeat;
+
+    }
+
+    &__sakura{
+        position: absolute;
+        z-index: 1000;
+        height: 100%;
+        width: 100%;
+        background-image: url(../img/sakura-background-lg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: 70%;
+        
+        &--branch {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-image: url(../img/sakura-bacl-10.png);
+                z-index: 2000;
+                top: 0;
+                right: 0;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position-x: 10%;
+                background-position-y: 40%;
+
+            // &-01{
+            //     background-image: url(../img/sakura-back-03.png);
+            //     z-index: 2000;
+            //     top: 0;
+            //     right: 0;
+            // }
+        }
+        &--petals {
+            position: absolute;
+            z-index: 1500;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 10rem;
+            height: 10rem;
+            &-01{
+                top:0;
+                right: 0;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petals-01.png);
+                animation: sakurafubuki 15s linear infinite;
+            }
+            &-02{
+                top:5%;
+                right: 0;
+                background-size: 50%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petals-02.png);
+                animation: 15s sakurafubuki 4s linear infinite;
+            }
+            &-03{
+                top:5%;
+                right: 5%;
+                // background-size: 50%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petals-03.png);
+                animation: 15s sakurafubuki 7s linear infinite;
+            }
+            &-04{
+                top:30%;
+                right: 10%;
+                // background-size: 50%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petals-03.png);
+                animation: 10s sakurafubuki 10s linear infinite;
+            }
+            &-05{
+                top:30%;
+                right: 10%;
+                background-size: 40%;
+                transform: scale(.5) rotate(-60deg);
+                background-image: url(../img/sakura-petals-02.png);
+                animation: 10s sakurafubuki 11s linear infinite;
+            }
+            &-06{
+                top:60%;
+                right: 10%;
+                // background-size: 40%;
+                transform: scale(.5) rotate(-60deg);
+                background-image: url(../img/sakura-petals-03.png);
+                animation: 10s sakurafubuki2 11s linear infinite;
+            }
+            
+        }
+
+    }
+    @keyframes sakurafubuki{
+        20%{
+            transform: scale(.5) rotate(30deg);
+        }
+        60% {
+            transform: scale(.7) rotate(-60deg);
+        }
+        100%{
+            top: 150%;
+            right: 130%;
+        }
+    }
+    @keyframes sakurafubuki2{
+        20%{
+            transform: scale(.5) rotate(30deg);
+        }
+        60% {
+            transform: scale(.7) rotate(-60deg);
+        }
+        100%{
+            top: 150%;
+            right: 110%;
+        }
+    }
+    // &__sakura {
+    //     position: absolute;
+    //     top:0;
+    //     left: 0;
+    //     z-index: 1100;
+    //     height: 100%;
+    //     width: 100%;
+
+    //     &--ppink,
+    //     &--hpink{
+    //         position: absolute;
+    //         background-repeat: no-repeat;
+    //         // background-size: 100%;
+    //         background-position: center;
+    //         width: 20rem;
+    //         height: 20rem; 
+    //         opacity: 1;
+    //     }
+    //     &--ppink {
+    //         background-image: url(../img/sakura-pink-pale-m.png);
+    //     }
+    //     &--hpink {
+    //         background-image: url(../img/sakura-pink-m.png);
+    //     }
+        
+    //     &--pink{
+    //         &:nth-child(1){
+    //             top: 0;
+    //             left: 0;
+    //             z-index: 1100;  
+    //             background-size: 60%;
+                 
+    //         }
+    //         &:nth-child(2){
+    //             top: 2%;
+    //             left: 10%;
+    //             z-index: 1200; 
+    //         }
+    //         &:nth-child(3){
+    //             top: -3%;
+    //             left: 35%;
+ 
+    //         }
+            
+    //     }
+        
+    //}
+
+}
