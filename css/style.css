@@ -39,7 +39,7 @@ body {
 h1 {
   font-weight: 700;
   font-size: 10rem;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Fascinate", cursive; }
 
 .sidebar {
   grid-row: 1/-1;
@@ -61,7 +61,7 @@ h1 {
     height: 100%; }
   .landing__letter {
     position: relative;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Fascinate", cursive;
     font-weight: 700;
     color: pink;
     background-image: linear-gradient(to right, #fc1138 0%, #fd3758 20%, white 100%);
@@ -112,13 +112,16 @@ h1 {
   grid-row: 1 / -1;
   z-index: 1000;
   background-image: linear-gradient(#045d5d, #048888, #03c9c9, #045d5d);
-  position: relative; }
+  position: relative;
+  display: grid;
+  grid-template-columns: [side-start] minmax(6rem, 1fr) [side-end] repeat(16, [col-start] minmax(min-content, 7.7rem) [col-end]) minmax(6rem, 1fr) [full-end];
+  grid-template-rows: minmax(5rem, 1fr) repeat(4, minmax(13.4rem, 1fr)) minmax(5rem, 1fr); }
   .about__maru {
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 15%;
-    left: 46%;
+    grid-row: 3 /5;
+    grid-column: 9/11;
     z-index: 1500;
     background-image: url(../img/sakura-doll-02.png);
     background-repeat: no-repeat; }
