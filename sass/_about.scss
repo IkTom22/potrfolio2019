@@ -73,8 +73,9 @@
             &-01{
                 top:0;
                 right: 0;
+                background-size: 20%;
                 transform: scale(0) rotate(0);
-                background-image: url(../img/sakura-petals-01.png);
+                background-image: url(../img/sakura-petal-03.png);
                 animation: sakurafubuki 15s linear infinite;
             }
             &-02{
@@ -91,31 +92,55 @@
                 // background-size: 50%;
                 transform: scale(0) rotate(0);
                 background-image: url(../img/sakura-petals-03.png);
-                animation: 15s sakurafubuki 7s linear infinite;
+                animation: 20s sakurafubuki 7s linear infinite;
             }
             &-04{
                 top:30%;
                 right: 10%;
-                // background-size: 50%;
+                background-size: 30%;
                 transform: scale(0) rotate(0);
-                background-image: url(../img/sakura-petals-03.png);
-                animation: 10s sakurafubuki 10s linear infinite;
+                background-image: url(../img/sakura-petals-02.png);
+                animation: 20s sakurafubuki 10s linear infinite;
             }
             &-05{
                 top:30%;
                 right: 10%;
-                background-size: 40%;
+                //background-size: 30%;
                 transform: scale(.5) rotate(-60deg);
-                background-image: url(../img/sakura-petals-02.png);
-                animation: 10s sakurafubuki 11s linear infinite;
+                background-image: url(../img/sakura-petals-03.png);
+                animation: 20s sakurafubuki 11s linear infinite;
             }
             &-06{
                 top:60%;
                 right: 10%;
-                // background-size: 40%;
+                background-size: 40%;
                 transform: scale(.5) rotate(-60deg);
-                background-image: url(../img/sakura-petals-03.png);
-                animation: 10s sakurafubuki2 11s linear infinite;
+                background-image: url(../img/sakura-petals-01.png);
+                animation: 20s sakurafubuki2 11s linear infinite;
+            }
+            &-07{
+                top:0;
+                right: 20%;
+                // background-size: 20%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petals-01.png);
+                animation: 20s sakurafubuki 5s linear infinite;
+            }
+            &-08{
+                top:0;
+                right: 25%;
+                background-size: 20%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petal-04.png);
+                animation: 20s sakurafubuki 9s linear infinite;
+            }
+            &-09{
+                top:0;
+                right: 15%;
+                background-size: 20%;
+                transform: scale(0) rotate(0);
+                background-image: url(../img/sakura-petal-05.png);
+                animation: 20s sakurafubuki 13s linear infinite;
             }
             
         }

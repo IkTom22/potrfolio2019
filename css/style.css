@@ -1,4 +1,3 @@
-@import url(../fonts/electroharmonix.regular.ttf);
 *,
 *::before,
 *::after {
@@ -13,7 +12,8 @@ html {
 body {
   font-size: 1.7rem;
   font-weight: 300;
-  background-color: black; }
+  background-color: black;
+  font-family: "Montserrat", sans-serif; }
 
 .container {
   display: grid;
@@ -21,25 +21,21 @@ body {
   grid-template-rows: minmax(5rem, 1fr) repeat(4, minmax(13.4rem, 1fr)) minmax(5rem, 1fr);
   height: 100vh; }
 
-.your-style {
-  font-family: 'Kamikaze 3D Gradient';
-  font-weight: normal;
-  font-style: normal; }
-
-.your-style {
-  font-family: 'Kamikaze';
-  font-weight: normal;
-  font-style: normal; }
-
-.your-style {
-  font-family: 'Electroharmonix';
-  font-weight: normal;
-  font-style: normal; }
-
 h1 {
   font-weight: 700;
   font-size: 10rem;
   font-family: "Orbitron", sans-serif; }
+
+h2 {
+  font-size: 7rem; }
+
+h3 {
+  font-size: 3.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 300; }
+
+h4 {
+  font-size: 3rem; }
 
 .sidebar {
   grid-row: 1/-1;
@@ -52,14 +48,23 @@ h1 {
   position: relative;
   grid-column: side-end / full-end;
   grid-row: 1 /-1;
-  justify-content: center;
-  align-items: center;
   display: grid;
   grid-template-columns: [side-start] minmax(6rem, 1fr) [side-end] repeat(auto-fill, [col-start] minmax(10rem, 1fr) [col-end]) minmax(6rem, 1fr) [full-end];
   grid-template-rows: minmax(5rem, 1fr) repeat(48, minmax(6.7rem, 1fr)) minmax(5rem, 1fr);
   justify-items: center;
-  align-items: end;
-  justify-content: center; }
+  align-items: center; }
+  .landing__title {
+    position: absolute;
+    grid-column: 5/10;
+    grid-row: 4/8;
+    justify-self: start; }
+    .landing__title--name {
+      color: #023a3a;
+      text-shadow: 3px 3px 1px #fcdae0; }
+    .landing__title--sub {
+      padding-left: 1rem;
+      color: #03c9c9;
+      text-shadow: 3px 3px 1px #023a3a; }
   .landing__logo {
     position: absolute;
     z-index: 3200;
@@ -76,7 +81,6 @@ h1 {
     align-items: center; }
     .landing__logo h4 {
       text-transform: uppercase;
-      font-size: 3rem;
       font-family: "Orbitron", sans-serif;
       color: #045d5d;
       grid-column: 2/3; }
@@ -163,8 +167,9 @@ h1 {
       .about__sakura--petals-01 {
         top: 0;
         right: 0;
+        background-size: 20%;
         transform: scale(0) rotate(0);
-        background-image: url(../img/sakura-petals-01.png);
+        background-image: url(../img/sakura-petal-03.png);
         animation: sakurafubuki 15s linear infinite; }
       .about__sakura--petals-02 {
         top: 5%;
@@ -178,26 +183,47 @@ h1 {
         right: 5%;
         transform: scale(0) rotate(0);
         background-image: url(../img/sakura-petals-03.png);
-        animation: 15s sakurafubuki 7s linear infinite; }
+        animation: 20s sakurafubuki 7s linear infinite; }
       .about__sakura--petals-04 {
         top: 30%;
         right: 10%;
+        background-size: 30%;
         transform: scale(0) rotate(0);
-        background-image: url(../img/sakura-petals-03.png);
-        animation: 10s sakurafubuki 10s linear infinite; }
+        background-image: url(../img/sakura-petals-02.png);
+        animation: 20s sakurafubuki 10s linear infinite; }
       .about__sakura--petals-05 {
         top: 30%;
         right: 10%;
-        background-size: 40%;
         transform: scale(0.5) rotate(-60deg);
-        background-image: url(../img/sakura-petals-02.png);
-        animation: 10s sakurafubuki 11s linear infinite; }
+        background-image: url(../img/sakura-petals-03.png);
+        animation: 20s sakurafubuki 11s linear infinite; }
       .about__sakura--petals-06 {
         top: 60%;
         right: 10%;
+        background-size: 40%;
         transform: scale(0.5) rotate(-60deg);
-        background-image: url(../img/sakura-petals-03.png);
-        animation: 10s sakurafubuki2 11s linear infinite; }
+        background-image: url(../img/sakura-petals-01.png);
+        animation: 20s sakurafubuki2 11s linear infinite; }
+      .about__sakura--petals-07 {
+        top: 0;
+        right: 20%;
+        transform: scale(0) rotate(0);
+        background-image: url(../img/sakura-petals-01.png);
+        animation: 20s sakurafubuki 5s linear infinite; }
+      .about__sakura--petals-08 {
+        top: 0;
+        right: 25%;
+        background-size: 20%;
+        transform: scale(0) rotate(0);
+        background-image: url(../img/sakura-petal-04.png);
+        animation: 20s sakurafubuki 9s linear infinite; }
+      .about__sakura--petals-09 {
+        top: 0;
+        right: 15%;
+        background-size: 20%;
+        transform: scale(0) rotate(0);
+        background-image: url(../img/sakura-petal-05.png);
+        animation: 20s sakurafubuki 13s linear infinite; }
 
 @keyframes sakurafubuki {
   20% {

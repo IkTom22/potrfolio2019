@@ -1,6 +1,7 @@
 $color-pink-darker: #fd3758;
 $color-pink: #fd4d6b;
 $color-pink-light: #fc9cac;
+$color-pink-lighter: #fdccd4;
 $color-pink-redish: #fc1138;
 $color-orange: #ff5e00;
 $color-orange-light: #ff905d;
@@ -13,6 +14,7 @@ $color-teal-darkest: #023a3a;
 
 $color-yellow: #fdfd04;
 $color-yellow-light: #fcfc3f;
+$color-yellow-lighter: #fafa74;
 $color-yellow-dark: rgb(201, 201, 5);
 
 $color-yellow-white: #fffffb;
@@ -31,7 +33,7 @@ $font-display:'Orbitron', sans-serif;
 // font-family: 'Poiret One', cursive;
 
 // font-family: 'Orbitron', sans-serif;
-
+$font-body:'Montserrat', sans-serif;
 
 
 
@@ -57,7 +59,8 @@ html {
 body {
     font-size: 1.7rem;
     font-weight: 300;
-    background-color:black;  
+    background-color:black; 
+    font-family: $font-body; 
 }
 .container{
     display: grid;
