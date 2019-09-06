@@ -2,8 +2,9 @@
     grid-column: side-end/ full-end;
     grid-row: 1 / -1;
     z-index: 1000;
+    height: 100vh;
     //background-image: linear-gradient( $color-teal-dark, $color-teal, $color-teal-light, $color-teal-dark);
-    background-image: linear-gradient( $color-teal-darkest, $color-teal-dark, $color-teal-light, $color-teal-dark, $color-teal-darkest);
+    background-image: linear-gradient( $color-teal-darkest, $color-teal-dark, $color-teal-dark, $color-teal-light);
     position: relative;
     @include base-template; 
     justify-items: center;
@@ -17,12 +18,14 @@
         width: 100%;
         grid-row: 7/10;
         grid-column: 2/3;
-        // top: 15%;
-        // left:46%;
         z-index: 1500;
-        background-image: url(../img/banzai-pink_02.png);
+        background-image: url(../img/sakura-doll_03.png);
         background-repeat: no-repeat;
         background-color: transparent;
+        transform: translateY(0) rotate(0);
+        transition: all linear;
+        animation: 10s jumping 10s ease-in infinite;
+
 
     }
     &__shadow {
@@ -30,13 +33,14 @@
         height: 2rem;
         width: 8rem;
         border-radius: 50%;
-        background-color: $color-teal-dark;
+        background-color: $color-teal;
         filter: blur(4px);
         //box-shadow: 0 3rem 3rem black;
         grid-row: 10/11;
         grid-column: 2/3;
         align-self: start;
         transform: translateY(-1rem);
+        animation: shadow-light 10s linear infinite;
     }
 
     &__sakura{
@@ -169,6 +173,78 @@
             top: 150%;
             right: 110%;
         }
+    }
+    @keyframes shadow-light {
+        0% {
+            width: 8rem;
+            transform: translateY(-1rem);
+        }
+        25%{
+            width: 10rem;
+            transform: translateY(-1rem);
+
+        }
+        50% {
+            width: 12rem;
+            transform: translateY(-1rem);
+
+        }
+        75%{
+            width: 10rem;
+            transform: translateY(-1rem);
+        }
+        100%{
+            width: 8rem;
+            transform: translateY(-1rem);
+        }
+    }
+
+    @keyframes jumping {
+        0% {
+            transform: translateY(0) rotate(0);
+        }
+
+        1% { 
+            transform: translateY(-.8rem) rotate(0);
+        }
+        4%{      
+            transform: translateY(0) rotate(0);   
+        }
+        70%{
+            transform: translateY(0) rotate(-.5deg);
+        }
+        71% {
+            transform: translateY(0) rotate(.5deg);
+        }
+        72%{
+            transform: translateY(0) rotate(-.5deg);
+        }
+        73% {
+            transform: translateY(0) rotate(.5deg);
+        }
+        74%{
+            transform: translateY(0) rotate(-.5deg);
+        }
+        75% {
+            transform: translateY(0) rotate(.5deg);
+        }
+        76% {
+            transform: translateY(0) rotate(-.5deg);
+        }
+        77% {
+            transform: translateY(0) rotate(.5deg);
+        }
+        78% {
+            transform: translateY(0) rotate(-.5deg);
+        }
+        79%{
+            transform: translateY(0) rotate(0);
+        }
+        100%{
+            
+            transform: translateY(0) rotate(0);
+        }
+
     }
 
 

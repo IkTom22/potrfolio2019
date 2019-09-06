@@ -7,25 +7,27 @@
     @include base-template;
     justify-items: center;
     align-items: center;
-    
-    //justify-content: center;
+
 
     &__title {
         position: absolute;
-        grid-column: 5/10;
-        grid-row: 4/8;
+        grid-column: 4 /9;
+        grid-row: 4/7;
         justify-self: start;
         
         &--name{
             color: $color-teal-darkest;
-            text-shadow: 3px 3px 1px $color-pink-white;
+            text-shadow: 2px 2px 1px $color-pink-white;
         }
         &--sub {
             padding-left: 1rem;
-            color: $color-teal-light;
-            text-shadow: 3px 3px 1px $color-teal-darkest;
-        }
-        
+            color: $color-pink-redish;
+            //text-shadow: 1px 1px 1px white;
+            background-image: linear-gradient($color-pink-darker, $color-orange-light);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        } 
     }
     
     &__logo{
@@ -45,7 +47,9 @@
         grid-template-rows: 3rem repeat(3, auto) 3rem ;
         justify-items: center;
         align-items: center;
-       
+        transform: translate(0, 1rem) rotate(0);
+        transition: all linear;
+        animation: hovering 10s linear infinite;
         & h4{
             text-transform: uppercase;
             
@@ -70,6 +74,26 @@
 
 
     }
+    @keyframes hovering {
+        0% {
+            transform: translate(0, 1rem) rotate(0);
+        }
+        25%{
+            transform: translate(1rem, -3rem) rotate(10deg);
+
+        }
+        50% {
+            transform: translate(0, -5rem) rotate(0deg);
+
+        }
+        75%{
+            transform: translate(-1rem, -3rem) rotate(-10deg);
+        }
+        100%{
+            transform: translate(0, 1rem) rotate(0);
+        }
+    }
+
 
     // &__wrapper {
     //     width: 100%;
